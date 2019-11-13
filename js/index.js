@@ -19,7 +19,6 @@ function newText() {
   if (num == 4) {
     paragraph.appendChild(br);
     newBg();
-    paragraph.appendChild(br);
   }
 }
 
