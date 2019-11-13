@@ -20,8 +20,7 @@ body {
 .middle {
     display: table-cell;
     vertical-align: middle;
-    padding-left: 10%;
-    padding-right: 10%;
+    padding: 10%;
 
 }
 
@@ -100,7 +99,7 @@ body {
 }
 
 .vsmall, a, a:visited {
-  color: #888;
+  color: #444;
   text-decoration: none;
 }
 
@@ -110,6 +109,6 @@ a:hover {
 }
 
 .vsmall {
-  padding-top: 1em;
-  font-size: 0.2em;
+  padding-top: 20em;
+  font-size: 0.5em;
 }

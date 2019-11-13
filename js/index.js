@@ -1,4 +1,4 @@
-var lines = ["because","the symbol and the symbolised","and with utter certainty","how it is read","here and there","however read","the location of meaning","one thing leads to another","it doesn't really matter","the subject eludes","the ebbs and follows","the core of the matter","it follows through","the crux of the issue","eludes but","it evades when","it stacks up","one and the same","there is a logic","the ins and outs","a symbiosis emerges","one and another","the clauses lengthen","from time to time","whenever grasped","is there a logic","then escapes and","in any order","whichever way","precisely","the story makes sense","the emphasis keeps shifting"];
+var lines = ["because","the symbol and the symbolised","and with utter certainty","how it is read","here and there","however read","the location of meaning","one thing leads to another","it doesn't really matter","the subject eludes","the ebbs and flows","it follows","the core of the matter","it follows through","the crux of the issue","eludes but","it evades when","it stacks up","one and the same","there is a logic","the ins and outs","a symbiosis emerges","one and another","the clauses lengthen","from time to time","whenever grasped","is there a logic","then escapes and","in any order","whichever way","precisely","the story makes sense","the emphasis keeps shifting"];
 var punctuation = [", "," "," "," ", ". ", ": "," ","? ",", ",", ",", ","; "];
 
 function begin() {
@@ -18,48 +18,15 @@ function newText() {
   if (num == 3) paragraph.appendChild(br);
   if (num == 4) {
     paragraph.appendChild(br);
-    paragraph.appendChild(br);
     newBg();
+    paragraph.appendChild(br);
   }
 }
 
 
-
-function newGenre() {
-  var randomGenre = genre[Math.floor(Math.random() * genre.length)];
-  document.getElementById('genre').innerHTML = randomGenre;
-  var newColor = randomColor({hue:'orange'});
-  document.getElementById('genre').style.color = newColor;
-  document.getElementById('na').style.background = newColor;
-  newBg();
-}
-
-function newSubject(){
-  var randomSubject = subject[Math.floor(Math.random() * subject.length)];
-  document.getElementById('subject').innerHTML = randomSubject;
-  var newColor = randomColor({hue:'orange'});
-  document.getElementById('subject').style.color = newColor;
-  document.getElementById('nn').style.background = newColor;
-  newBg();
-}
-
-function newPhrase () {
-  newGenre();
-  newSubject();
-  var newColor = randomColor({hue:'blue',luminosity:'dark'});
-  document.getElementById('bgd').style.background = newColor;
-  document.getElementById('na').style.color = newColor;
-  document.getElementById('nn').style.color = newColor;
-  document.getElementById('np').style.color = newColor;
-}
-
 function newBg () {
-  var newColor = randomColor({hue:'blue',luminosity:'dark'});
+  var newColor = randomColor({luminosity:'dark'});
   document.getElementById('bgd').style.background = newColor;
-  newColor = randomColor({hue:'blue',luminosity:'light'});
-  document.getElementById('footer').style.color = newColor;
-  newColor = randomColor({hue:'yellow',luminosity:'bright'})
-  document.getElementById('np').style.background = newColor;
 }
 
 // randomColor by David Merfield under the CC0 license
